@@ -3,42 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ABOUT ME</title>
+  <title>ABOUT US</title>
   <style>
-    :root {
-      --bg: var(--bg);
-      --card-bg: #1f2336;
-      --fg: #f5f5f8;
-      --accent: #ffdd57;
-      --transition: .25s ease;
-      --max-width: 1200px;
-      --gap: 1rem;
-        }
-        body {
+    body {
       margin: 0;
-      background: grey;
-      color: var(--fg);
-      line-height: 1.4;
+      background: #6c757d;
+      color: #f5f5f8;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
       min-height: 100vh;
-      padding-top: 0; 
     }
 
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-    a { color: inherit; text-decoration: none; }
     header {
       position: sticky;
       top: 10px;
       margin: 20px auto;
-      max-width: var(--max-width);
+      max-width: 1200px;
       padding: 10px 16px;
-      background: var(--card-bg);
+      background: #1f2336;
       display: flex;
       align-items: center;
-      gap: 1rem;
+      justify-content: space-between;
       border-radius: 30px;
-      padding-right: 1rem;
-      flex-wrap: wrap;
-      box-shadow: 0 12px 36px -8px rgba(0,0,0,.35);
+      box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.35);
       z-index: 10;
     }
 
@@ -47,182 +39,122 @@
       font-size: 1.25rem;
       display: flex;
       align-items: center;
-      gap: 8px;
-    }
-    nav {
-      flex: 1;
     }
 
     .nav-list {
       list-style: none;
-      margin: 0;
-      padding: 0;
       display: flex;
       gap: 32px;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .nav-list li {
-      position: relative;
+      padding: 0;
+      margin: 0;
+    
     }
 
     .nav-list a {
       padding: 10px 16px;
       border-radius: 25px;
       font-size: 1rem;
-      display: inline-block;
+      transition: 0.25s ease;
+
     }
 
     .nav-list a:hover,
     .nav-list a:focus-visible {
-      background: var(--accent);
+      background: #ffdd57;
       color: #000;
       outline: none;
     }
 
     .container {
-      max-width: var(--max-width);
+      max-width: 1200px;
       margin: 40px auto;
       padding: 0 16px;
       display: flex;
-      gap: 20px;
       flex-wrap: wrap;
+      gap: 20px;
     }
 
-    .large-box {
-      flex: 2 1 480px;
-      width: fit-content;
-      height: fit-content;
-      margin: auto;
+    .profile-card {
       display: flex;
-      flex-direction: column;
-      gap: 8px;
       background: #1f2336;
-    border-radius: 25px;
-
+      border-radius: 20px;
+      box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.35);
+      overflow: hidden;
+      flex: 1 1 100%;
+      max-width: 100%;
     }
 
-    .desc{
-      top: 10px;
-      margin: 20px auto;
-      padding: 10px 16px;
-      display: flex;
-      
-      align-items: center;
-      gap: 1rem;
-      border-radius: 30px;
-      padding-right: 1rem;
-      flex-wrap: wrap;
-      box-shadow: 0 12px 36px -8px rgba(0,0,0,.35);
-      z-index: 10;
-   
+    .profile-card img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 20px 0 0 20px;
     }
 
-    .small-boxes {
-      flex: 1 1 240px;
+    .profile-desc {
+      padding: 20px;
       display: flex;
-      color: white;
       flex-direction: column;
-      gap: 20px;
+      justify-content: center;
     }
 
-  
-    .container img {
-        width: auto;
-        height: 250px;
-      padding: 10px 16px;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      border-radius: 30px;
-      padding-right: 1rem;
-      flex-wrap: wrap;
-      z-index: 10;
-        }
+    .profile-desc p {
+      margin: 0;
+      font-size: 1rem;
+    }
 
+    @media (max-width: 768px) {
+      .profile-card {
+        flex-direction: column;
+        align-items: center;
+      }
 
+      .profile-card img {
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
-  <header aria-label="Main navigation">
-    <div class="logo" aria-label="Site logo">
-      <!-- Placeholder logo -->
-      <span></span><span>PORTFOLIO</span>
-    </div>
-
-   </button>
-
+  <header>
+    <div class="logo">PORTFOLIO</div>
     <nav>
-      <ul id="primary-navigation" class="nav-list" role="menubar">
-        <li role="none"><a role="menuitem" href="homepage.html" tabindex="0">Home</a></li>
-        <li role="none"><a role="menuitem" href="#" tabindex="0">Explore</a></li>
-        <li role="none"><a role="menuitem" href="#" tabindex="0">About</a></li>
+      <ul class="nav-list">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">About</a></li>
       </ul>
     </nav>
   </header>
 
-  <main id="main-content">
+  <main>
     <div class="container">
-
-      <div class="small-boxes">
-        <div class="desc" id="1">
-        <img src="photos/srikavinesh.jpeg" alt="Taniish">
-        </div>     
-      </div>
-
-      <div class="large-box">
-        <div class="desc" id="1">
-          <p>Hi! I'm Srikavinesh, a passionate and results-driven with 1 years of experience. 
-            I specialize in areas, and I thrive on turning complex challenges into practical solutions.
-            Over the years, I’ve worked with companies, helping them 
-            projects. I’m always learning, always curious, and committed to growing both personally and 
-            professionally.</p>
+      <div class="profile-card">
+        <img src="photos/srikavinesh.jpeg" alt="Srikavinesh">
+        <div class="profile-desc">
+          <p>Hi! I'm Srikavinesh, a passionate and results-driven individual with 1 year of experience. I thrive on turning complex challenges into practical solutions. I’ve worked with companies, helping them with various projects. I’m always learning, curious, and committed to growing both personally and professionally.</p>
         </div>
-        
       </div>
     </div>
-<div class="cont">
-    <div class="container">
 
-      <div class="small-boxes">
-        <div class="desc" id="2">
+    <div class="container">
+      <div class="profile-card">
         <img src="photos/taniish.jpeg" alt="Taniish">
-        </div>     
-      </div>
-
-      <div class="large-box">
-        <div class="desc" id="2">
-          <p>Hi! I'm Taniish, a passionate and results-driven  with 1 years of experience. 
-            I specialize in areas, and I thrive on turning complex challenges into practical solutions.
-            Over the years, I’ve worked with companies, helping them projects. I’m always learning, always curious, and committed to growing both personally and 
-            professionally.</p>
+        <div class="profile-desc">
+          <p>Hi! I'm Taniish, a passionate and results-driven individual with 1 year of experience. I specialize in tackling tough problems with efficient solutions. I'm always looking for ways to grow, contribute, and innovate in everything I do.</p>
         </div>
-        
       </div>
     </div>
-</div>
+
     <div class="container">
-
-      <div class="small-boxes">
-        <div class="desc" id="3">
-        <img src="photos/Tejashri.jpg" alt="Taniish" class="images">
-        </div>     
-      </div>
-
-      <div class="large-box">
-        <div class="desc" id="3">
-          <p>Hi! I'm Tejashri, a passionate and results-driven  with 1 years of experience. 
-            I specialize in areas, and I thrive on turning complex challenges into practical solutions.
-            Over the years, I’ve worked with companies, helping them projects. I’m always learning, always curious, and committed to growing both personally and 
-            professionally.</p>
+      <div class="profile-card">
+        <img src="photos/Tejashri.jpg" alt="Tejashri">
+        <div class="profile-desc">
+          <p>Hi! I'm Tejashri, an enthusiastic learner and dedicated professional with 1 year of experience. I enjoy transforming ideas into real-world solutions and continuously strive to expand my knowledge and impact.</p>
         </div>
-        
       </div>
     </div>
-
   </main>
-
-
-  </body>
+</body>
 </html>
