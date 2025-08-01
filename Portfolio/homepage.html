@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <title>Our Team Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
+    <title>
+        NAVIGATION BAR
+    </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-        body {
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:rgb(223, 225, 221);
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        ul{
+            list-style-type:circle;
+            display: block;
+            padding: 20px;
+            margin: 15px;
+            background-color: black;
+            text-align: center;
+            border-radius: 50px;
+        
+        }
+
+        li{
+            
+            display: inline;
+            flex-direction: row;
+            display: inline-block;
+            
+        }
+
+        li a{
+            color:white;
+            padding: 10px;
+            text-decoration: none;
+            gap:10px;
+            
+            
+        }
+        li a:hover{
+            background-color:goldenrod;
+            border-radius: 50px;
+            
+        }
+       body {
         margin: 0;
         background: gray;
         color: var(--fg);
@@ -93,15 +133,68 @@
             transform: translateY(-5px);
         }
         
+       .content{
+        width: 15cm;
+      background: linear-gradient(to bottom right, #444, #333);
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      text-align:center;
+      border-radius: 30px 30px 0px 0px;
+
+        
+           
+    }
+    .image{
+        margin-left: 80px;
+        border-radius: 35px;
+        align-items: center;
+        display:flex;
+        text-align: center;
+        font-size:15px;
+        justify-content: center;
+        color: black; 
+        
+
+    }
+    
 
     </style>
 </head>
-<body>
-
-    <header>
-        <h1>Meet Our Amazing Team</h1>
-        <p>We are a diverse group of professionals committed to excellence!</p>
-    </header>
+<body> 
+    
+    <ul>
+        <li>
+            <a href="homepage.html">HOME</a>
+            <a href="page2.html">ABOUT</a>
+            <a href="#contact">CONTACT</a>
+            <a href="#help">HELP</a>
+            
+        </li>
+    </ul>
+    <div class ="container">
+    <div class="image"><img src="https://img.freepik.com/free-photo/flat-lay-office-desk-assortment-with-empty-screen-tablet_23-2148707960.jpg?semt=ais_hybrid&w=740" alt="image not found" width="600px" height="400px"></div>
+    <div class="content">
+        <p style="color: white;font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">We are a passionate and collaborative team driven by a shared goal of innovation and excellence. Each member brings unique skills and perspectives, allowing us to tackle challenges creatively and efficiently. Our mission is to work together with integrity, dedication, and a problem-solving mindset to deliver impactful results. We value teamwork, continuous learning, and open communication, which help us grow both individually and as a unit. With a strong focus on quality and collaboration, we are committed to achieving our objectives and making a positive difference through our efforts.
+</p>
+    </div>
+    </div>
+      <div class ="container">
+    <div class="image"><img src="photos/ran1.jpg" alt="image not found" width="600px" height="400px"></div>
+    <div class="content">
+        <p style="color: white;font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">We are a passionate and collaborative team driven by a shared goal of innovation and excellence. Each member brings unique skills and perspectives, allowing us to tackle challenges creatively and efficiently. Our mission is to work together with integrity, dedication, and a problem-solving mindset to deliver impactful results. We value teamwork, continuous learning, and open communication, which help us grow both individually and as a unit. With a strong focus on quality and collaboration, we are committed to achieving our objectives and making a positive difference through our efforts.
+</p>
+    </div>
+    </div>
+      <div class ="container">
+    <div class="image"><img src="photos/ran2.jpg" alt="image not found" width="600px" height="400px"></div>
+    <div class="content">
+        <p style="color: white;font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">We are a passionate and collaborative team driven by a shared goal of innovation and excellence. Each member brings unique skills and perspectives, allowing us to tackle challenges creatively and efficiently. Our mission is to work together with integrity, dedication, and a problem-solving mindset to deliver impactful results. We value teamwork, continuous learning, and open communication, which help us grow both individually and as a unit. With a strong focus on quality and collaboration, we are committed to achieving our objectives and making a positive difference through our efforts.
+</p>
+    </div>
+    </div>
 
     <div class="container">
        
@@ -146,6 +239,6 @@
             </div>
         </div>
 
-
+    </div>
+    
 </body>
-</html>
