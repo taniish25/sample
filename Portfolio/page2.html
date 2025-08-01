@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <title>About Details</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ABOUT US</title>
   <style>
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       background: #6c757d;
@@ -12,12 +14,10 @@
       font-family: Arial, sans-serif;
       line-height: 1.6;
       min-height: 100vh;
+      padding: 0 16px;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
 
     header {
       position: sticky;
@@ -32,6 +32,8 @@
       border-radius: 30px;
       box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.35);
       z-index: 10;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .logo {
@@ -47,15 +49,15 @@
       gap: 32px;
       padding: 0;
       margin: 0;
-    
     }
 
     .nav-list a {
       padding: 10px 16px;
       border-radius: 25px;
       font-size: 1rem;
-      transition: 0.25s ease;
-
+      transition: .25s ease;
+      font-weight: 600;
+      display: inline-block;
     }
 
     .nav-list a:hover,
@@ -65,30 +67,27 @@
       outline: none;
     }
 
-    .container {
+    main {
       max-width: 1200px;
       margin: 40px auto;
-      padding: 0 16px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
+      padding: 0;
     }
 
     .profile-card {
-      display: flex;
+      display: none;
       background: #1f2336;
       border-radius: 20px;
       box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.35);
       overflow: hidden;
-      flex: 1 1 100%;
-      max-width: 100%;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
     }
 
     .profile-card img {
       width: 250px;
       height: 250px;
       object-fit: cover;
-      border-radius: 20px 0 0 20px;
     }
 
     .profile-desc {
@@ -96,6 +95,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      flex: 1 1 300px;
     }
 
     .profile-desc p {
@@ -103,15 +103,40 @@
       font-size: 1rem;
     }
 
+    .back-link {
+  margin-top: 10px;
+  display: inline-block;
+  background: #ffdd57;
+  color: #000;
+  width: 5%;
+  padding: 4px 10px;   /* smaller padding */
+  border-radius: 12px; /* smaller rounding */
+  font-size: 0.85rem;  /* slightly smaller text */
+  text-decoration: none;
+}
+
+
+    /* show only the targeted profile */
+    #srikavinesh:target,
+    #taniish:target,
+    #tejashri:target {
+      display: flex;
+    }
+
+    /* fallback: if no fragment, show Srikavinesh */
+    body:not(:target) #srikavinesh {
+      display: flex;
+    }
+
     @media (max-width: 768px) {
       .profile-card {
         flex-direction: column;
         align-items: center;
       }
-
       .profile-card img {
-        border-radius: 20px 20px 0 0;
         width: 100%;
+        height: auto;
+        border-radius: 20px 20px 0 0;
       }
     }
   </style>
@@ -119,40 +144,43 @@
 <body>
   <header>
     <div class="logo">PORTFOLIO</div>
-    <nav>
+    <nav aria-label="Main navigation">
       <ul class="nav-list">
         <li><a href="homepage.html">Home</a></li>
         <li><a href="#">Explore</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="page2.html" aria-current="page">About</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <div class="container">
-      <div class="profile-card">
-        <img src="photos/srikavinesh.jpeg" alt="Srikavinesh">
-        <div class="profile-desc">
-          <p>Hi! I'm Srikavinesh, a passionate and results-driven individual with 1 year of experience. I thrive on turning complex challenges into practical solutions. I’ve worked with companies, helping them with various projects. I’m always learning, curious, and committed to growing both personally and professionally.</p>
-        </div>
+    <!-- Srikavinesh detail -->
+    <div id="srikavinesh" class="profile-card">
+      <img loading="lazy" src="photos/srikavinesh.jpeg" alt="Portrait of Srikavinesh M">
+      <div class="profile-desc">
+        <h2>Srikavinesh M</h2>
+        <p>Hi! I'm Srikavinesh, a passionate and results-driven individual with 1 year of experience. I thrive on turning complex challenges into practical solutions. I’ve worked with companies, helping them with various projects. I’m always learning, curious, and committed to growing both personally and professionally.</p>
+        <a class="back-link" href="homepage.html">Back</a>
       </div>
     </div>
 
-    <div class="container">
-      <div class="profile-card">
-        <img src="photos/taniish.jpeg" alt="Taniish">
-        <div class="profile-desc">
-          <p>Hi! I'm Taniish, a passionate and results-driven individual with 1 year of experience. I specialize in tackling tough problems with efficient solutions. I'm always looking for ways to grow, contribute, and innovate in everything I do.</p>
-        </div>
+    <!-- Taniish detail -->
+    <div id="taniish" class="profile-card">
+      <img loading="lazy" src="photos/taniish.jpeg" alt="Portrait of Taniish Sugumar">
+      <div class="profile-desc">
+        <h2>Taniish Sugumar</h2>
+        <p>Hi! I'm Taniish, a passionate and results-driven individual with 1 year of experience. I specialize in tackling tough problems with efficient solutions. I'm always looking for ways to grow, contribute, and innovate in everything I do.</p>
+        <a class="back-link" href="homepage.html">Back</a>
       </div>
     </div>
 
-    <div class="container">
-      <div class="profile-card">
-        <img src="photos/Tejashri.jpg" alt="Tejashri">
-        <div class="profile-desc">
-          <p>Hi! I'm Tejashri, an enthusiastic learner and dedicated professional with 1 year of experience. I enjoy transforming ideas into real-world solutions and continuously strive to expand my knowledge and impact.</p>
-        </div>
+    <!-- Tejashri detail -->
+    <div id="tejashri" class="profile-card">
+      <img loading="lazy" src="photos/Tejashri.jpg" alt="Portrait of Tejashri">
+      <div class="profile-desc">
+        <h2>Tejashri</h2>
+        <p>Hi! I'm Tejashri, an enthusiastic learner and dedicated professional with 1 year of experience. I enjoy transforming ideas into real-world solutions and continuously strive to expand my knowledge and impact.</p>
+        <a class="back-link" href="homepage.html">Back</a>
       </div>
     </div>
   </main>
